@@ -5,24 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Website</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CDN (quick development; for production consider a built Tailwind) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- htmx for declarative AJAX - CDN will work on GitHub Pages -->
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
 </head>
-<body>
+<body class="antialiased">
     <div class="container">
-        <h1>Quiz Website</h1>
+        <header class="flex items-center justify-between mb-8">
+            <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">Quiz Master</h1>
+            <!-- Theme toggle -->
+            <button id="theme-toggle" aria-label="Toggle color theme" 
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200 shadow-md hover:shadow-lg" 
+                    title="Toggle light / dark">
+                <span id="theme-icon" class="text-2xl">🌙</span>
+            </button>
+        </header>
         
         <!-- File Upload Section -->
         <div id="upload-section" class="section">
-            <h2>Upload Quiz JSON</h2>
+            <div class="text-center mb-6">
+                <span class="text-6xl mb-4 inline-block">🎯</span>
+            </div>
+            <h2>Start Your Quiz Adventure!</h2>
             <input type="file" id="file-input" accept=".json">
             <button id="load-sample-btn" 
                     data-hx-get="https://monaliza14xx.github.io/quiz/sample-quiz.json"
                     data-hx-trigger="click"
                     data-hx-swap="none">
-                Load Sample Quiz
+                Try Sample Quiz
             </button>
-            <p class="info">Upload a JSON file with quiz questions or load the sample quiz</p>
+            <p class="info">📚 Upload your own quiz or try our sample to get started!</p>
         </div>
 
         <!-- Quiz Section -->
@@ -37,27 +50,39 @@
 
             <!-- Question Display -->
             <div id="question-container" class="question-container">
-                <h2 id="question-text"></h2>
-                <div id="choices-container" class="choices-container"></div>
-                <button id="next-btn" class="btn hidden">Next Question</button>
-                <button id="submit-btn" class="btn hidden">Submit Quiz</button>
+                <div id="question-header" class="mb-8 flex items-start gap-4">
+                    <div id="question-number" class="min-w-[48px] h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-green-400 to-green-600 text-white font-bold text-lg shadow-lg">1</div>
+                    <h2 id="question-text" class="text-2xl font-bold leading-tight"></h2>
+                </div>
+
+                <div id="choices-container" class="choices-container grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"></div>
+
+                <div class="mt-8 flex items-center justify-center gap-4">
+                    <button id="next-btn" class="btn hidden">Check Answer</button>
+                    <button id="submit-btn" class="btn hidden">Check Answer</button>
+                </div>
             </div>
         </div>
 
         <!-- Results Section -->
         <div id="results-section" class="section hidden">
-            <h2>Quiz Results</h2>
+            <div class="text-center mb-6">
+                <span id="results-emoji" class="text-8xl mb-4 inline-block">🎉</span>
+            </div>
+            <h2 class="text-3xl font-bold text-center mb-6">Quiz Complete!</h2>
             <div id="score-container" class="score-container">
                 <p id="score-text"></p>
                 <p id="percentage-text"></p>
             </div>
             
             <div id="mistakes-container" class="mistakes-container">
-                <h3>Review Your Mistakes:</h3>
+                <h3>📖 Review & Learn:</h3>
                 <div id="mistakes-list"></div>
             </div>
             
-            <button id="restart-btn" class="btn">Start New Quiz</button>
+            <div class="text-center">
+                <button id="restart-btn" class="btn btn-secondary">Try Another Quiz</button>
+            </div>
         </div>
     </div>
 

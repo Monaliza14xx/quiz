@@ -70,6 +70,43 @@ const percentageText = document.getElementById('percentage-text');
 const mistakesList = document.getElementById('mistakes-list');
 const restartBtn = document.getElementById('restart-btn');
 
+/* ---------------- Theme handling ---------------- */
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+function applyTheme(theme) {
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+    else document.documentElement.classList.remove('dark');
+}
+
+function updateThemeIcon() {
+    if (document.documentElement.classList.contains('dark')) {
+        if (themeIcon) themeIcon.textContent = '☀️';
+    } else {
+        if (themeIcon) themeIcon.textContent = '🌙';
+    }
+}
+
+(function initTheme() {
+    const stored = localStorage.getItem('theme');
+    if (stored) {
+        applyTheme(stored);
+    } else {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
+    }
+    updateThemeIcon();
+})();
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function () {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeIcon();
+    });
+}
+/* ---------------- end theme handling ---------------- */
+
 // Sample quiz data
 const sampleQuiz = {
     "title": "General Knowledge Quiz",
@@ -224,36 +261,56 @@ function startQuiz() {
 // Display current question
 function displayQuestion() {
     const question = quizData.questions[currentQuestionIndex];
-    
+    const questionNumber = document.getElementById('question-number');
+    questionNumber.textContent = currentQuestionIndex + 1;
+
     questionText.textContent = question.question;
     choicesContainer.innerHTML = '';
     
+    // Remove any existing explanation
+    const existingExplanation = document.getElementById('answer-explanation');
+    if (existingExplanation) {
+        existingExplanation.remove();
+    }
+
     question.choices.forEach((choice, index) => {
         const choiceElement = document.createElement('div');
-        choiceElement.classList.add('choice');
-        choiceElement.textContent = choice;
+        choiceElement.className = 'choice';
+        
+        const label = document.createElement('span');
+        label.textContent = choice;
+        label.className = 'choice-label';
+
+        choiceElement.appendChild(label);
         choiceElement.dataset.index = index;
         choiceElement.addEventListener('click', selectChoice);
         choicesContainer.appendChild(choiceElement);
     });
-    
+
     updateProgress();
     nextBtn.classList.add('hidden');
     submitBtn.classList.add('hidden');
-}
-
-// Select a choice
+    nextBtn.textContent = 'CHECK ANSWER';
+    submitBtn.textContent = 'CHECK ANSWER';
+}// Select a choice
 function selectChoice(event) {
+    // Don't allow selection if already checked
+    if (event.target.classList.contains('disabled')) {
+        return;
+    }
+    
     const choices = document.querySelectorAll('.choice');
     choices.forEach(choice => choice.classList.remove('selected'));
     
     event.target.classList.add('selected');
     
-    // Show next or submit button
+    // Show check button
     if (currentQuestionIndex < quizData.questions.length - 1) {
         nextBtn.classList.remove('hidden');
+        nextBtn.textContent = 'CHECK ANSWER';
     } else {
         submitBtn.classList.remove('hidden');
+        submitBtn.textContent = 'CHECK ANSWER';
     }
 }
 
@@ -266,10 +323,68 @@ function nextQuestion() {
     }
     
     const answerIndex = parseInt(selectedChoice.dataset.index);
-    userAnswers.push(answerIndex);
+    const question = quizData.questions[currentQuestionIndex];
+    const isCorrect = answerIndex === question.correctAnswer;
     
+    // If not yet checked (button says "CHECK ANSWER"), show feedback
+    if (nextBtn.textContent === 'CHECK ANSWER') {
+        checkAnswer(answerIndex, isCorrect);
+        return;
+    }
+    
+    // Otherwise, move to next question
+    userAnswers.push(answerIndex);
     currentQuestionIndex++;
     displayQuestion();
+}
+
+// Check the answer and show feedback
+function checkAnswer(answerIndex, isCorrect) {
+    const choices = document.querySelectorAll('.choice');
+    const question = quizData.questions[currentQuestionIndex];
+    
+    // Disable all choices
+    choices.forEach(choice => {
+        choice.classList.add('disabled');
+        choice.style.pointerEvents = 'none';
+    });
+    
+    // Mark correct and incorrect
+    choices[question.correctAnswer].classList.add('correct');
+    if (!isCorrect) {
+        choices[answerIndex].classList.add('incorrect');
+        
+        // Show explanation below choices
+        showExplanation(question, answerIndex);
+    }
+    
+    // Change button text to "CONTINUE"
+    nextBtn.textContent = 'CONTINUE';
+    nextBtn.classList.remove('hidden');
+}
+
+// Show explanation for wrong answer
+function showExplanation(question, wrongAnswerIndex) {
+    // Remove any existing explanation
+    const existingExplanation = document.getElementById('answer-explanation');
+    if (existingExplanation) {
+        existingExplanation.remove();
+    }
+    
+    const explanationDiv = document.createElement('div');
+    explanationDiv.id = 'answer-explanation';
+    explanationDiv.className = 'answer-explanation';
+    explanationDiv.innerHTML = `
+        <div class="explanation-content">
+            <p class="explanation-label">❌ Incorrect</p>
+            <p class="explanation-text">You selected: <span class="your-answer">${question.choices[wrongAnswerIndex]}</span></p>
+            <p class="explanation-text">Correct answer: <span class="correct-answer">✓ ${question.choices[question.correctAnswer]}</span></p>
+        </div>
+    `;
+    
+    // Insert after choices container
+    const choicesContainer = document.getElementById('choices-container');
+    choicesContainer.parentNode.insertBefore(explanationDiv, choicesContainer.nextSibling);
 }
 
 // Submit quiz
@@ -281,10 +396,44 @@ function submitQuiz() {
     }
     
     const answerIndex = parseInt(selectedChoice.dataset.index);
-    userAnswers.push(answerIndex);
+    const question = quizData.questions[currentQuestionIndex];
+    const isCorrect = answerIndex === question.correctAnswer;
     
+    // If not yet checked (button says "CHECK ANSWER"), show feedback
+    if (submitBtn.textContent === 'CHECK ANSWER') {
+        checkAnswerForSubmit(answerIndex, isCorrect);
+        return;
+    }
+    
+    // Otherwise, finish the quiz
+    userAnswers.push(answerIndex);
     calculateScore();
     showResults();
+}
+
+// Check answer for the last question
+function checkAnswerForSubmit(answerIndex, isCorrect) {
+    const choices = document.querySelectorAll('.choice');
+    const question = quizData.questions[currentQuestionIndex];
+    
+    // Disable all choices
+    choices.forEach(choice => {
+        choice.classList.add('disabled');
+        choice.style.pointerEvents = 'none';
+    });
+    
+    // Mark correct and incorrect
+    choices[question.correctAnswer].classList.add('correct');
+    if (!isCorrect) {
+        choices[answerIndex].classList.add('incorrect');
+        
+        // Show explanation below choices
+        showExplanation(question, answerIndex);
+    }
+    
+    // Change button text to "FINISH QUIZ"
+    submitBtn.textContent = 'FINISH QUIZ';
+    submitBtn.classList.remove('hidden');
 }
 
 // Update progress bar
@@ -312,8 +461,20 @@ function showResults() {
     const totalQuestions = quizData.questions.length;
     const percentage = ((score / totalQuestions) * 100).toFixed(1);
     
+    // Update emoji based on score
+    const resultsEmoji = document.getElementById('results-emoji');
+    if (percentage >= 90) {
+        resultsEmoji.textContent = '🏆';
+    } else if (percentage >= 70) {
+        resultsEmoji.textContent = '🎉';
+    } else if (percentage >= 50) {
+        resultsEmoji.textContent = '👍';
+    } else {
+        resultsEmoji.textContent = '💪';
+    }
+    
     scoreText.textContent = `You scored ${score} out of ${totalQuestions}`;
-    percentageText.textContent = `${percentage}%`;
+    percentageText.textContent = `${percentage}% Correct!`;
     
     displayMistakes();
 }
@@ -365,9 +526,10 @@ function displayMistakes() {
     if (mistakeCount === 0) {
         const perfectMsg = document.createElement('p');
         perfectMsg.style.textAlign = 'center';
-        perfectMsg.style.color = '#4caf50';
+        perfectMsg.style.fontSize = '1.2rem';
         perfectMsg.style.fontWeight = 'bold';
-        perfectMsg.textContent = 'Perfect score! No mistakes! 🎉';
+        perfectMsg.style.padding = '20px';
+        perfectMsg.textContent = '🌟 Perfect score! You\'re a quiz master! �';
         mistakesList.appendChild(perfectMsg);
     }
 }
