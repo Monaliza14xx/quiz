@@ -4,6 +4,52 @@ let currentQuestionIndex = 0;
 let userAnswers = [];
 let score = 0;
 
+// Lightweight htmx polyfill for handling data-hx-* attributes
+// This ensures functionality even if htmx CDN is blocked
+function initHtmxPolyfill() {
+    document.addEventListener('click', function(event) {
+        const target = event.target;
+        const hxGet = target.getAttribute('data-hx-get');
+        
+        if (hxGet) {
+            event.preventDefault();
+            fetch(hxGet)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Trigger custom event similar to htmx:afterRequest
+                    const customEvent = new CustomEvent('htmx:afterRequest', {
+                        detail: {
+                            target: target,
+                            xhr: { responseText: JSON.stringify(data) }
+                        }
+                    });
+                    document.body.dispatchEvent(customEvent);
+                })
+                .catch(error => {
+                    console.error('Error loading resource:', error);
+                    // Trigger error event
+                    const errorEvent = new CustomEvent('htmx:responseError', {
+                        detail: {
+                            target: target,
+                            error: error
+                        }
+                    });
+                    document.body.dispatchEvent(errorEvent);
+                });
+        }
+    });
+}
+
+// Initialize htmx polyfill if htmx is not available
+if (typeof htmx === 'undefined') {
+    initHtmxPolyfill();
+}
+
 // DOM elements
 const uploadSection = document.getElementById('upload-section');
 const quizSection = document.getElementById('quiz-section');
@@ -80,10 +126,36 @@ const sampleQuiz = {
 
 // Event listeners
 fileInput.addEventListener('change', handleFileUpload);
-loadSampleBtn.addEventListener('click', loadSampleQuiz);
 nextBtn.addEventListener('click', nextQuestion);
 submitBtn.addEventListener('click', submitQuiz);
 restartBtn.addEventListener('click', restartQuiz);
+
+// Handle htmx:afterRequest event for loading quiz
+document.body.addEventListener('htmx:afterRequest', function(event) {
+    if (event.detail.target.id === 'load-sample-btn') {
+        try {
+            const data = JSON.parse(event.detail.xhr.responseText);
+            if (validateQuizData(data)) {
+                quizData = data;
+                startQuiz();
+            } else {
+                alert('Invalid quiz format. Please ensure your JSON file has a "questions" array where each question has: question text, choices array, and correctAnswer index.');
+            }
+        } catch (error) {
+            alert('Failed to parse quiz data. Please check the JSON format.');
+        }
+    }
+});
+
+// Handle htmx:responseError event for fallback
+document.body.addEventListener('htmx:responseError', function(event) {
+    if (event.detail.target.id === 'load-sample-btn') {
+        console.error('Error loading quiz from GitHub:', event.detail.error);
+        alert('Failed to load quiz from GitHub. Loading local sample instead.');
+        quizData = sampleQuiz;
+        startQuiz();
+    }
+});
 
 // Handle file upload
 function handleFileUpload(event) {
@@ -107,11 +179,9 @@ function handleFileUpload(event) {
     reader.readAsText(file);
 }
 
-// Load sample quiz
-function loadSampleQuiz() {
-    quizData = sampleQuiz;
-    startQuiz();
-}
+// Load sample quiz from GitHub using fetch (htmx-style approach)
+// This function is now handled by htmx or the htmx polyfill above
+// function loadSampleQuiz() { ... }
 
 // Validate quiz data structure
 function validateQuizData(data) {
