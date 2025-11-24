@@ -154,8 +154,8 @@ document.body.addEventListener('htmx:afterRequest', function(event) {
 // Handle htmx:responseError event for fallback
 document.body.addEventListener('htmx:responseError', function(event) {
     if (event.detail.target.id === 'load-sample-btn') {
-        console.error('Error loading quiz from GitHub:', event.detail.error);
-        alert('Failed to load quiz from GitHub. Loading local sample instead.');
+        console.error('Error loading sample quiz file:', event.detail.error);
+        alert('Failed to load sample quiz file. Loading embedded sample instead.');
         quizData = sampleQuiz;
         startQuiz();
     }
