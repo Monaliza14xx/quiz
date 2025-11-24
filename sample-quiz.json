@@ -1,426 +1,845 @@
 {
-  "title": "Artificial Intelligence Special Topic: Comprehensive Exam (Lectures 1-7)",
-  "total_questions": 70,
-  "questions": [
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) Which year is generally associated with the beginning of the 'Third AI Boom', driven largely by Deep Learning advancements?",
-      "choices": ["1956", "1980", "2000", "2012"],
-      "correctAnswer": 3
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) Who are the three researchers often credited with the resurgence of Deep Learning (receiving the Turing Award)?",
-      "choices": ["Hinton, Bengio, LeCun", "Minsky, Papert, Rosenblatt", "Turing, McCarthy, Minsky", "Musk, Altman, Ng"],
-      "correctAnswer": 0
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) What competition in 2012 demonstrated the superiority of Deep Learning in image recognition?",
-      "choices": ["DARPA Challenge", "ILSVRC (ImageNet)", "Kaggle Titanic", "AlphaGo Match"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) Which type of neural network is characterized by all nodes being connected to each other and feeding information back and forth?",
-      "choices": ["Feedforward Network", "Hopfield Network", "Convolutional Network", "Perceptron"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) What distinguishes a 'Restricted Boltzmann Machine' (RBM) from a standard Boltzmann Machine?",
-      "choices": ["It has no hidden layers", "There are no connections between nodes in the same layer", "It uses only supervised learning", "It cannot handle binary data"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) Which AI model by DeepMind solved a 50-year-old grand challenge in biology regarding protein structure prediction?",
-      "choices": ["AlphaGo", "GPT-3", "AlphaFold", "DALL-E"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) Which learning paradigm involves an agent learning through trial and error to maximize a reward?",
-      "choices": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Self-supervised Learning"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) What hardware advancement significantly enabled the training of large deep learning models?",
-      "choices": ["Quantum CPU", "GPU (Graphics Processing Unit)", "Tape Drives", "Analog Computers"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) What is the primary difference between supervised and unsupervised learning?",
-      "choices": ["The speed of training", "The presence of labeled data (ground truth)", "The number of layers in the network", "The type of hardware used"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 1,
-      "question": "(Lecture 1) Which model is a 'Generative Pre-trained Transformer' developed by OpenAI?",
-      "choices": ["BERT", "T5", "GPT", "ResNet"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) In the context of machine learning, what are 'Features'?",
-      "choices": ["The output labels", "The observations or input variables used for prediction", "The errors in the model", "The coding language used"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) Which metric is defined as True Positives / (True Positives + False Positives)?",
-      "choices": ["Recall", "Accuracy", "Precision", "F1 Score"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) What does 'High Bias' typically indicate in a machine learning model?",
-      "choices": ["The model is overfitting", "The model is too complex", "The model is underfitting (too simple)", "The model has high variance"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) Which biological structure does the 'connection weight' in a neural network simulate?",
-      "choices": ["Nucleus", "Axon", "Synapse", "Dendrite"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) What is the purpose of the 'Backpropagation' algorithm?",
-      "choices": ["To initialize weights", "To calculate the error contribution of each neuron to update weights", "To forward pass the input data", "To visualize the network"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) Which activation function outputs values between 0 and 1?",
-      "choices": ["ReLU", "Tanh", "Sigmoid", "Linear"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) What happens during 'Overfitting'?",
-      "choices": ["The model performs well on training data but poorly on test data", "The model performs poorly on both training and test data", "The model generalizes perfectly", "The training error is higher than the test error"],
-      "correctAnswer": 0
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) In Gradient Descent, what determines the step size taken towards the minimum?",
-      "choices": ["The number of layers", "The Learning Rate", "The batch size", "The input dimension"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) Which logic gate problem could a single-layer Perceptron NOT solve?",
-      "choices": ["AND", "OR", "XOR", "NOT"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 2,
-      "question": "(Lecture 2) What is the main advantage of using Stochastic Gradient Descent (SGD) over Batch Gradient Descent?",
-      "choices": ["It is more accurate", "It is faster per update and can escape local minima", "It uses more memory", "It guarantees a straight path to the minimum"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) What biological discovery by Hubel & Wiesel inspired Convolutional Neural Networks?",
-      "choices": ["The structure of DNA", "Simple and Complex cells in the visual cortex", "The mechanism of hearing", "The speed of nerve impulses"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) What is the primary operation in a CNN that detects local features like edges?",
-      "choices": ["Pooling", "Convolution", "Flattening", "Softmax"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) What is the function of the 'Pooling' layer?",
-      "choices": ["To increase the image size", "To reduce dimensionality and provide translation invariance", "To add non-linearity", "To classify the image"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) Who developed 'LeNet', one of the first successful CNNs for digit recognition?",
-      "choices": ["Geoffrey Hinton", "Yann LeCun", "Andrew Ng", "Fei-Fei Li"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) What is a 'Filter Bank' in the context of CNNs?",
-      "choices": ["A mechanism to remove noise", "A collection of learnable kernels (weights) in a convolutional layer", "A database of images", "A type of activation function"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) In the 'Classical' recognition pipeline (pre-2012), features like SIFT or HOG were:",
-      "choices": ["Learned by the network", "Hand-crafted/Fixed", "Randomly generated", "Not used"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) Which dataset is famous for handwritten digit recognition (0-9)?",
-      "choices": ["CIFAR-10", "ImageNet", "MNIST", "COCO"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) What does 'Max Pooling' do?",
-      "choices": ["Calculates the average of a region", "Selects the maximum value in a local window", "Sums all values in a window", "Multiplies values in a window"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) Deep learning architectures for vision are characterized by:",
-      "choices": ["A single flat layer", "Hierarchical feature learning (Low -> Mid -> High level)", "Only using fully connected layers", "Manual feature extraction"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 3,
-      "question": "(Lecture 3) What does a 'Simple Cell' in the visual cortex primarily detect?",
-      "choices": ["Complex shapes", "Faces", "Oriented edges/bars", "Motion"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) Which activation function was key to the success of AlexNet in 2012?",
-      "choices": ["Sigmoid", "Tanh", "ReLU", "Linear"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) What technique did AlexNet use to reduce overfitting?",
-      "choices": ["Batch Normalization", "Dropout", "Layer Normalization", "Gradient Clipping"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) How many layers did VGG-19 have?",
-      "choices": ["8", "19", "22", "152"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) What is the main innovation of ResNet (Residual Networks)?",
-      "choices": ["Inception modules", "Skip (Residual) connections", "Separable convolutions", "Attention mechanisms"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) ResNet allows for training extremely deep networks by mitigating which problem?",
-      "choices": ["Overfitting", "Exploding Gradients", "Vanishing Gradients", "Data scarcity"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) What is the size of the filters typically used in VGG networks?",
-      "choices": ["3x3", "5x5", "7x7", "11x11"],
-      "correctAnswer": 0
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) Which network introduced the 'Inception Module'?",
-      "choices": ["AlexNet", "ResNet", "GoogLeNet", "VGG"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) What is the primary goal of 'Semantic Segmentation'?",
-      "choices": ["To classify the whole image", "To detect bounding boxes", "To label every pixel with a class", "To generate new images"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) The 'Vanishing Gradient' problem occurs when gradients become:",
-      "choices": ["Too large", "Close to zero", "Negative", "NaN"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 4,
-      "question": "(Lecture 4) What is 'Transfer Learning' in the context of CNNs?",
-      "choices": ["Training a model from scratch", "Using weights pre-trained on a large dataset (e.g., ImageNet) for a new task", " transferring data between GPUs", "Converting a CNN to an RNN"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) What does RNN stand for?",
-      "choices": ["Recursive Neural Network", "Recurrent Neural Network", "Random Neural Network", "Rapid Neural Network"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) What algorithm is used to train RNNs?",
-      "choices": ["Standard Backpropagation", "Backpropagation Through Time (BPTT)", "Contrastive Divergence", "Q-Learning"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) In an RNN, the hidden state at time 't' depends on:",
-      "choices": ["Only the input at time 't'", "Only the hidden state at time 't-1'", "The input at time 't' and the hidden state at time 't-1'", "The output at time 't'"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) Which problem makes standard RNNs difficult to train on long sequences?",
-      "choices": ["Vanishing/Exploding Gradients", "Too many parameters", "Slow inference", "Lack of data"],
-      "correctAnswer": 0
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) What simple technique is used to handle 'Exploding Gradients'?",
-      "choices": ["Dropout", "Gradient Clipping", "Batch Normalization", "ReLU"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) In language modeling, what is the goal?",
-      "choices": ["To translate text", "To predict the next word/character in a sequence", "To classify sentiment", "To summarize text"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) What is 'Truncated BPTT'?",
-      "choices": ["Training without backpropagation", "Unfolding the RNN for a limited number of steps to reduce complexity", "Ignoring the time dimension", "Using only the last time step"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) What is an N-gram model?",
-      "choices": ["A deep neural network", "A statistical model predicting a word based on N-1 previous words", "A model with N layers", "A dataset of N images"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) What does 'Parameter Sharing' mean in RNNs?",
-      "choices": ["Weights are different at each time step", "The same weights (U, V, W) are used across all time steps", "Sharing weights between different models", "Sharing data between users"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 5,
-      "question": "(Lecture 5) The output layer of a language model typically uses which activation function to produce probabilities?",
-      "choices": ["ReLU", "Sigmoid", "Softmax", "Tanh"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) What does LSTM stand for?",
-      "choices": ["Linear Standard Time Machine", "Long Short-Term Memory", "Latent Structure Time Model", "Low Short-Term Memory"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) Which component is the 'highway' for information in an LSTM, helping prevent vanishing gradients?",
-      "choices": ["Hidden State", "Cell State", "Input Gate", "Output Gate"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) Which gate in an LSTM is responsible for removing information from the cell state?",
-      "choices": ["Input Gate", "Output Gate", "Forget Gate", "Update Gate"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) What is 'CEC' in the context of LSTM history?",
-      "choices": ["Central Error Controller", "Constant Error Carousel", "Computed Error Context", "Critical Error Correction"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) Which activation function is typically used for the 'gates' (Input, Forget, Output) in an LSTM?",
-      "choices": ["Tanh", "ReLU", "Sigmoid", "Linear"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) Which activation function is typically used to create the 'Candidate Cell State' (update vector)?",
-      "choices": ["Sigmoid", "Tanh", "ReLU", "Softmax"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) What is a 'Peep-hole connection'?",
-      "choices": ["A connection allowing the gates to inspect the Cell State", "A connection to the next layer", "A connection to the previous input", "A visualization tool"],
-      "correctAnswer": 0
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) Compared to a standard RNN, an LSTM unit is:",
-      "choices": ["Simpler", "More complex with more parameters", "Faster to train", "Unable to handle sequences"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) The output hidden state (h_t) of an LSTM is a filtered version of:",
-      "choices": ["The Input Gate", "The Forget Gate", "The Cell State", "The previous input"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 6,
-      "question": "(Lecture 6) In the equation C_t = f_t * C_{t-1} + i_t * g_t, what does 'f_t' represent?",
-      "choices": ["Input Gate", "Forget Gate", "Output Gate", "Candidate State"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) How does a GRU (Gated Recurrent Unit) differ from an LSTM?",
-      "choices": ["It has more gates", "It separates Cell State and Hidden State", "It combines the Forget and Input gates into an 'Update Gate'", "It cannot be used for sequences"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) What are the two gates in a standard GRU?",
-      "choices": ["Input and Output", "Forget and Reset", "Update and Reset", "Update and Forget"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) A Bi-directional LSTM consists of:",
-      "choices": ["Two LSTMs reading input in the same direction", "One LSTM reading forward and one reading backward", "Two LSTMs stacked vertically", "An LSTM and a GRU"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) In an Encoder-Decoder architecture, the Encoder compresses the input sequence into a:",
-      "choices": ["Fixed-length Context Vector", "Variable-length list", "Single word", "Matrix of zeros"],
-      "correctAnswer": 0
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) What problem does the 'Attention Mechanism' solve in Seq2Seq models?",
-      "choices": ["The vanishing gradient problem", "The bottleneck of a fixed-length context vector", "The need for GPUs", "The problem of overfitting"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) What are the three vectors used in the Self-Attention mechanism?",
-      "choices": ["Input, Output, Hidden", "Query, Key, Value", "Alpha, Beta, Gamma", "Source, Target, Context"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) The 'Transformer' model relies entirely on which mechanism?",
-      "choices": ["Recurrence", "Convolution", "Attention", "Pooling"],
-      "correctAnswer": 2
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) Why is 'Positional Encoding' necessary in Transformers?",
-      "choices": ["To increase accuracy", "Because the model has no inherent sense of order/sequence", "To encrypt the data", "To compress the input"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) What is 'Word2Vec'?",
-      "choices": ["A text editor", "A technique to convert words into vectors where similar words are close in space", "A translation engine", "A type of RNN"],
-      "correctAnswer": 1
-    },
-    {
-      "lecture": 7,
-      "question": "(Lecture 7) Which of the following is a BERT model characteristic?",
-      "choices": ["Unidirectional (Left-to-Right)", "Bidirectional context", "Generative only", "Uses LSTM cells"],
-      "correctAnswer": 1
-    }
-  ]
+    "title": "Comprehensive AI & Deep Learning Exam (Lectures 1-7)",
+    "questions": [
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "In the context of AI history, what event in 2012 significantly boosted the popularity of Deep Learning?",
+            "choices": ["The invention of the Perceptron", "Google DeepMind's AlphaGo victory", "AlexNet winning the ILSVRC competition", " The release of ChatGPT"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which learning paradigm involves an agent learning through trial and error to maximize a reward?",
+            "choices": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Semi-supervised Learning"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the main characteristic of 'Supervised Learning'?",
+            "choices": ["Data is unlabeled", "Data is labeled with 'ground truth'", "The agent interacts with an environment", "It finds hidden structures in data"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which of the following is NOT a typical application of Unsupervised Learning?",
+            "choices": ["Clustering customers", "Dimensionality reduction", "Predicting house prices based on labeled historical data", "Anomaly detection"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does 'AI Winter' refer to?",
+            "choices": ["A period of rapid AI growth", "A period of reduced funding and interest in AI research", "Using AI for climate change modeling", "The cooling systems required for AI supercomputers"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Who is considered one of the 'Godfathers of Deep Learning' along with Hinton and Bengio?",
+            "choices": ["Elon Musk", "Yann LeCun", "Bill Gates", "Alan Turing"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the 'Singularity' in the context of AI?",
+            "choices": ["A single neuron model", "The point where AI surpasses human intelligence", "A specific activation function", "An error in code"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which framework is primarily used for symbolic AI?",
+            "choices": ["Neural Networks", "Logic and Rules (Expert Systems)", "Genetic Algorithms", "Support Vector Machines"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Deep Learning is a subset of:",
+            "choices": ["Data Science only", "Machine Learning", "Robotics only", "Database Management"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which task is generally considered 'easier' for modern AI?",
+            "choices": ["Common sense reasoning", "Image Classification", "Understanding sarcasm", "Creative writing with true novelty"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is a common metric to evaluate a classification model?",
+            "choices": ["Mean Squared Error", "Accuracy", "Learning Rate", "Batch Size"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which dataset is famous for hand-written digit recognition?",
+            "choices": ["ImageNet", "CIFAR-10", "MNIST", "COCO"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What hardware advancement significantly enabled Deep Learning?",
+            "choices": ["Faster Hard Drives", "GPUs (Graphics Processing Units)", "Better Keyboards", "Larger Monitors"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which company developed AlphaGo?",
+            "choices": ["OpenAI", "DeepMind (Google)", "Facebook", "Microsoft"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 1,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the main goal of Artificial General Intelligence (AGI)?",
+            "choices": ["To play chess perfectly", "To perform any intellectual task that a human can do", "To recognize faces", "To translate languages"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 2,
+            "calculation": "Step function: y = 1 if sum >= 0 else 0. Sum = (1*0.5) + (0*0.5) - 0.2 = 0.3. Since 0.3 >= 0, output is 1.",
+            "formula": "y = f(Σ(wi*xi) - θ)",
+            "question": "In a simple Perceptron with inputs [1, 0], weights [0.5, 0.5], and a bias (threshold) of -0.2, what is the output if using a step function (threshold=0)?",
+            "choices": ["0", "1", "0.5", "-0.2"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 2,
+            "calculation": "Sigmoid(0) = 1 / (1 + e^-0) = 1 / (1 + 1) = 0.5",
+            "formula": "σ(x) = 1 / (1 + e^-x)",
+            "question": "What is the value of the Sigmoid activation function when the input is 0?",
+            "choices": ["0", "0.5", "1", "-1"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 2,
+            "calculation": "ReLU(-5) = max(0, -5) = 0",
+            "formula": "f(x) = max(0, x)",
+            "question": "What is the output of the ReLU activation function for an input of -5?",
+            "choices": ["-5", "0", "5", "1"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does 'Bias' represent in a neural network neuron?",
+            "choices": ["The importance of the input", "A shift in the activation function curve", "The learning rate", "The error rate"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which component is responsible for introducing non-linearity in a neural network?",
+            "choices": ["Weights", "Bias", "Activation Function", "Input Layer"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Overfitting'?",
+            "choices": ["The model performs poorly on training data", "The model memorizes training data but fails on test data", "The model is too simple", "The learning rate is too low"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 2,
+            "calculation": "Accuracy = (TP + TN) / Total. (80+10)/100 = 0.9",
+            "formula": "Accuracy = (TP + TN) / (TP + TN + FP + FN)",
+            "question": "If a model correctly predicts 80 cats and 10 non-cats, but misses 5 cats and 5 non-cats (Total 100 samples), what is the accuracy?",
+            "choices": ["80%", "85%", "90%", "95%"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 2,
+            "calculation": "Precision = TP / (TP + FP). 80 / (80 + 5) = 80/85 approx 0.94",
+            "formula": "Precision = TP / (TP + FP)",
+            "question": "Using the previous example (TP=80, FP=5), what is the Precision?",
+            "choices": ["80%", "94%", "88%", "100%"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the purpose of dividing data into Training and Test sets?",
+            "choices": ["To save memory", "To train two models", "To evaluate the model's generalization ability", "To speed up training"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Gradient Descent'?",
+            "choices": ["A type of neural network", "An optimization algorithm to minimize the loss function", "A data preprocessing technique", "A validation method"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which term describes the difference between the model's prediction and the actual value?",
+            "choices": ["Weight", "Bias", "Loss (or Error)", "Activation"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What happens if the Learning Rate is too high?",
+            "choices": ["Training is very slow", "The model converges perfectly", "The loss may oscillate or diverge (overshoot)", "The model overfits"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which activation function maps values to the range (-1, 1)?",
+            "choices": ["Sigmoid", "ReLU", "Tanh", "Linear"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "A 'Fully Connected Layer' means:",
+            "choices": ["Every neuron is connected to every neuron in the next layer", "Neurons are connected randomly", "Neurons connect only to their neighbors", "Neurons have no connections"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 2,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Backpropagation'?",
+            "choices": ["Running the network forward", "Calculating gradients of the loss w.r.t weights to update them", "Deleting bad neurons", "Adding more layers"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 3,
+            "calculation": "Output size = (W - K + 2P)/S + 1. (224 - 11 + 0)/4 + 1 = 213/4 + 1 = 53.25 + 1 -> 54 (approx formula logic, usually integers)",
+            "formula": "O = (W - K + 2P) / S + 1",
+            "question": "If input image is 224x224, kernel size is 11x11, stride is 4, and padding is 0. What is the output width? (Integer result)",
+            "choices": ["54", "55", "56", "224"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 3,
+            "calculation": "Pooling halves the dimension. 224 / 2 = 112",
+            "formula": "Output = Input / 2 (for 2x2 pooling stride 2)",
+            "question": "If you apply 2x2 Max Pooling with stride 2 to a 224x224 feature map, what is the resulting size?",
+            "choices": ["224x224", "112x112", "56x56", "111x111"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the main operation in a Convolutional Layer?",
+            "choices": ["Matrix Multiplication", "Element-wise addition", "Sliding a filter (kernel) over the input", "Global averaging"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What feature of CNNs allows them to recognize an object regardless of where it is in the image?",
+            "choices": ["Translation Invariance", "Rotation Invariance", "Scale Invariance", "Color Invariance"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which famous dataset contains 1.5 million labeled images for classification?",
+            "choices": ["MNIST", "ImageNet", "CIFAR-100", "Pascal VOC"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "In LeNet-5, what activation function was primarily used?",
+            "choices": ["ReLU", "Sigmoid / Tanh", "Leaky ReLU", "Swish"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "AlexNet introduced which activation function to speed up convergence?",
+            "choices": ["Sigmoid", "Tanh", "ReLU", "Softmax"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What technique did AlexNet use to reduce overfitting?",
+            "choices": ["Batch Normalization", "Dropout", "Layer Normalization", "Residual Connections"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 3,
+            "calculation": "Params = (Kernel_H * Kernel_W * Input_Channels + 1) * Filters. (3*3*3 + 1) * 10 = 28 * 10 = 280",
+            "formula": "Params = (Kh * Kw * Cin + 1) * Cout",
+            "question": "A Conv layer has 10 filters of size 3x3, applied to an RGB image (3 channels). How many parameters (weights + bias) are there?",
+            "choices": ["90", "100", "280", "300"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is a 'Stride' in convolution?",
+            "choices": ["The size of the kernel", "The number of filters", "The step size the filter moves across the image", "The amount of zero padding"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Padding' used for?",
+            "choices": ["To reduce image size", "To preserve the spatial dimensions of the input", "To increase contrast", "To remove noise"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which layer typically follows convolutional layers to perform classification?",
+            "choices": ["Another Conv layer", "Pooling layer", "Fully Connected (Dense) layer", "Dropout layer"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does a 'Filter' or 'Kernel' learn to detect?",
+            "choices": ["The final class label", "Features like edges, textures, and patterns", "The size of the image", "The number of objects"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What architecture uses 1x1 convolutions to reduce dimensionality (Bottleneck layer)?",
+            "choices": ["LeNet", "AlexNet", "GoogLeNet (Inception)", "VGG"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 3,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What problem does VGGNet address by using small 3x3 filters?",
+            "choices": ["Exploding gradients", "Reducing parameters while maintaining depth", "Overfitting", "Data scarcity"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "Output = (224 - 7 + 2*3)/2 + 1 = (223)/2 + 1 = 111.5 + 1 -> 112",
+            "formula": "O = (W - K + 2P) / S + 1",
+            "question": "ResNet initial layer: Input 224, Kernel 7, Stride 2, Padding 3. What is output size?",
+            "choices": ["110", "112", "56", "224"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the key innovation of ResNet?",
+            "choices": ["Inception Modules", "Residual (Skip) Connections", "Dense Connections", "Attention Mechanism"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "H(x) = F(x) + x",
+            "question": "In a Residual Block, if the input is x and the learned function is F(x), what is the output?",
+            "choices": ["F(x)", "F(x) * x", "F(x) + x", "x"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What problem does ResNet solve to allow training of very deep networks (e.g., 152 layers)?",
+            "choices": ["Vanishing Gradient problem", "Overfitting", "Memory constraints", "Slow inference"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which network architecture is known for using repeating blocks of 3x3 convolutions?",
+            "choices": ["AlexNet", "VGGNet", "LeNet", "GoogLeNet"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "In GoogLeNet, what is the purpose of the 'Inception Module'?",
+            "choices": ["To use residual connections", "To perform convolutions with different kernel sizes (1x1, 3x3, 5x5) in parallel", "To use only 1x1 convolutions", "To skip layers"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Transfer Learning'?",
+            "choices": ["Training a model from scratch", "Using weights from a pre-trained model on a new task", "Transferring data between servers", "Converting Python code to C++"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which VGG version has 16 weight layers?",
+            "choices": ["VGG-11", "VGG-16", "VGG-19", "VGG-22"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Fine-tuning' in the context of Transfer Learning?",
+            "choices": ["Using the model without changes", "Retraining the entire model from random weights", "Updating the weights of a pre-trained model on a new dataset", "Changing the architecture"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the 'Vanishing Gradient' problem?",
+            "choices": ["Gradients become too large", "Gradients become too small, stopping learning in early layers", "Weights become zero", "Loss becomes negative"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which activation function is primarily used in ResNet?",
+            "choices": ["Sigmoid", "Tanh", "ReLU", "Linear"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is a 'Bottleneck Layer' in ResNet?",
+            "choices": ["A layer that widens the network", "A structure using 1x1 convs to reduce dimensions before 3x3 convs", "The output layer", "The input layer"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Semantic Segmentation aims to:",
+            "choices": ["Classify the entire image", "Draw a box around objects", "Classify every pixel in the image", "Detect edges only"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which architecture won ILSVRC 2015 with an error rate of 3.57%?",
+            "choices": ["AlexNet", "VGG", "GoogLeNet", "ResNet"],
+            "correctAnswer": 3
+        },
+        {
+            "lecture": 4,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Why does using 1x1 convolutions reduce computation?",
+            "choices": ["It doesn't", "It reduces the number of channels (depth)", "It reduces the spatial size", "It removes bias"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does 'RNN' stand for?",
+            "choices": ["Recursive Neural Network", "Recurrent Neural Network", "Random Neural Network", "Rapid Neural Network"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "ht = f(Wx * xt + Wh * ht-1 + b)",
+            "question": "In an RNN, the current hidden state depends on:",
+            "choices": ["Only the current input", "Only the previous hidden state", "Current input and previous hidden state", "Future inputs"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'BPTT'?",
+            "choices": ["Backpropagation Through Time", "Best Practice Training Technique", "Binary Pattern Training Time", "Batch Processing Through Tensor"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which problem typically plagues standard RNNs when dealing with long sequences?",
+            "choices": ["Overfitting", "Vanishing Gradient", "High bias", "Low variance"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "The 'Unfolding' of an RNN means:",
+            "choices": ["Removing loops to visualize it as a sequence of time steps", "Making the network wider", "Deleting hidden layers", "Increasing learning rate"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which architecture was designed to solve the vanishing gradient problem in RNNs?",
+            "choices": ["CNN", "LSTM", "Perceptron", "Autoencoder"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Exploding Gradient'?",
+            "choices": ["Gradients become too small", "Gradients accumulate and become very large, causing instability", "Weights become zero", "Loss stays constant"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What technique can mitigate Exploding Gradients?",
+            "choices": ["Gradient Clipping", "Increasing learning rate", "Using Sigmoid activation", "Removing layers"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "In Language Modeling, what is the task?",
+            "choices": ["Classifying images", "Predicting the next word in a sequence", "Translating text", "Summarizing text"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Teacher Forcing'?",
+            "choices": ["Forcing the model to learn faster", "Using the actual ground truth output from the previous step as input for the current step during training", "Using predicted output as input", "Skipping validation"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which activation function is typically used for the 'gates' in LSTM/GRU (output 0 to 1)?",
+            "choices": ["ReLU", "Tanh", "Sigmoid", "Linear"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does the 'Truncated BPTT' do?",
+            "choices": ["Backpropagates through the entire sequence", "Stops backpropagation after a fixed number of steps to save computation", "Removes the loss function", "Uses only forward pass"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'One-to-Many' RNN architecture used for?",
+            "choices": ["Image Captioning", "Sentiment Analysis", "Machine Translation", "Video Classification"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Many-to-One' RNN architecture used for?",
+            "choices": ["Image Captioning", "Sentiment Analysis (Text Classification)", "Machine Translation", "Text Generation"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 5,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the core idea of 'Parameter Sharing' in RNNs?",
+            "choices": ["Using different weights for each time step", "Using the same weights (U, V, W) across all time steps", "Sharing weights between different models", "Not using weights"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does LSTM stand for?",
+            "choices": ["Long Short-Term Memory", "Linear Soft-Text Model", "Large Scale Training Module", "Latency Sensitive Time Model"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which gate in LSTM controls what information to throw away from the cell state?",
+            "choices": ["Input Gate", "Output Gate", "Forget Gate", "Update Gate"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which gate in LSTM controls what new information is stored in the cell state?",
+            "choices": ["Input Gate", "Output Gate", "Forget Gate", "Reset Gate"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the 'Cell State' in LSTM often compared to?",
+            "choices": ["A conveyor belt", "A trash can", "A filter", "A multiplier"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which activation function is used to create the 'candidate' cell state values (range -1 to 1)?",
+            "choices": ["Sigmoid", "ReLU", "Tanh", "Softmax"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Peephole Connection'?",
+            "choices": ["Connecting gates to the cell state", "Connecting input directly to output", "Looking at future data", "Skipping layers"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does GRU stand for?",
+            "choices": ["Gated Recurrent Unit", "General Regression Unit", "Global Reset Unit", "Gradient Rectified Unit"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "How many gates does a standard GRU have?",
+            "choices": ["1", "2", "3", "4"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which gates are present in a GRU?",
+            "choices": ["Input, Output", "Forget, Input", "Update, Reset", "Read, Write"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is a key difference between LSTM and GRU?",
+            "choices": ["GRU has a separate cell state", "LSTM has fewer parameters", "GRU merges cell state and hidden state", "LSTM cannot handle long sequences"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which problem led to the invention of LSTM?",
+            "choices": ["Overfitting", "Vanishing Gradient", "Large datasets", "Fast computation"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What operation is primarily used to update the cell state in LSTM (allowing smooth gradient flow)?",
+            "choices": ["Addition", "Multiplication", "Division", "Exponentiation"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Which architecture is computationally cheaper per step: LSTM or GRU?",
+            "choices": ["LSTM", "GRU", "Both are same", "Neither"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "The Output Gate in LSTM controls:",
+            "choices": ["What goes into the cell", "What is forgotten", "What part of the cell state is output to the hidden state", "The learning rate"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 6,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does CEC stand for in the context of LSTM?",
+            "choices": ["Constant Error Carousel", "Central Error Computer", "Critical Error Correction", "Common Error Calculation"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is a 'Bi-directional LSTM'?",
+            "choices": ["Two LSTMs running in parallel", "One LSTM running forward and one backward", "An LSTM with two layers", "An LSTM with double the weights"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Seq2Seq' model primarily used for?",
+            "choices": ["Image classification", "Sequence-to-Sequence mapping (e.g., Translation)", "Clustering", "Regression"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "In Encoder-Decoder architecture, what does the Encoder produce?",
+            "choices": ["The output sequence", "A context vector (fixed-length representation)", "The loss value", "The input sequence"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is the 'Bottleneck' problem in traditional Encoder-Decoder?",
+            "choices": ["The encoder is too slow", "Compressing the entire sequence into a single fixed vector loses information", "The decoder is too fast", "The vocabulary is too small"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What mechanism allows the Decoder to focus on specific parts of the Input during generation?",
+            "choices": ["Dropout", "Attention Mechanism", "Pooling", "Normalization"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "The Transformer model is based entirely on:",
+            "choices": ["RNNs", "CNNs", "Attention Mechanism", "Reinforcement Learning"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What are the three vectors used in Self-Attention?",
+            "choices": ["Query, Key, Value", "Input, Output, Hidden", "Alpha, Beta, Gamma", "Read, Write, Forget"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 7,
+            "calculation": "Attention(Q, K, V) = softmax(QK^T / sqrt(dk))V",
+            "formula": "N/A",
+            "question": "In Scaled Dot-Product Attention, what mathematical operation determines the similarity between Query and Key?",
+            "choices": ["Addition", "Dot Product", "Subtraction", "Division"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Why does Transformer need 'Positional Encoding'?",
+            "choices": ["It doesn't", "To encode the meaning of words", "Because it has no recurrence/convolution to handle order inherently", "To encrypt the data"],
+            "correctAnswer": 2
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Multi-Head Attention'?",
+            "choices": ["Running attention multiple times in parallel to capture different relationships", "Attending to multiple sentences", "Using multiple models", "Paying attention to the head of the sentence"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What is 'Word2Vec'?",
+            "choices": ["A dictionary", "A method to represent words as dense vectors", "A translation tool", "A spell checker"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "What does CTC (Connectionist Temporal Classification) handle?",
+            "choices": ["Image alignment", "Alignment between audio frames and characters in Speech Recognition", "Text translation", "Video compression"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "BERT stands for:",
+            "choices": ["Bidirectional Encoder Representations from Transformers", "Best Error Reduction Technique", "Binary Encoded Recurrent Transformer", "Basic English Reading Tool"],
+            "correctAnswer": 0
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "Is BERT unidirectional or bidirectional?",
+            "choices": ["Unidirectional", "Bidirectional", "Neither", "Both"],
+            "correctAnswer": 1
+        },
+        {
+            "lecture": 7,
+            "calculation": "N/A (Conceptual)",
+            "formula": "N/A",
+            "question": "GPT stands for:",
+            "choices": ["General Purpose Transformer", "Generative Pre-trained Transformer", "Global Positioning Tool", "Graphic Processing Technology"],
+            "correctAnswer": 1
+        }
+    ]
 }
