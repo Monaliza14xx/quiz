@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Website</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- htmx for declarative AJAX - CDN will work on GitHub Pages -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
 </head>
 <body>
     <div class="container">
@@ -14,7 +16,12 @@
         <div id="upload-section" class="section">
             <h2>Upload Quiz JSON</h2>
             <input type="file" id="file-input" accept=".json">
-            <button id="load-sample-btn">Load Sample Quiz</button>
+            <button id="load-sample-btn" 
+                    data-hx-get="https://raw.githubusercontent.com/Monaliza14xx/quiz/refs/heads/main/sample-quiz.json"
+                    data-hx-trigger="click"
+                    data-hx-swap="none">
+                Load Sample Quiz
+            </button>
             <p class="info">Upload a JSON file with quiz questions or load the sample quiz</p>
         </div>
 
