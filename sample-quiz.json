@@ -1,20 +1,426 @@
 {
-    "title": "Sample Quiz",
-    "questions": [
-        {
-            "question": "What is the capital of France?",
-            "choices": ["London", "Berlin", "Paris", "Madrid"],
-            "correctAnswer": 2
-        },
-        {
-            "question": "Which planet is known as the Red Planet?",
-            "choices": ["Venus", "Mars", "Jupiter", "Saturn"],
-            "correctAnswer": 1
-        },
-        {
-            "question": "What is 2 + 2?",
-            "choices": ["3", "4", "5", "6"],
-            "correctAnswer": 1
-        }
-    ]
+  "title": "Artificial Intelligence Special Topic: Comprehensive Exam (Lectures 1-7)",
+  "total_questions": 70,
+  "questions": [
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) Which year is generally associated with the beginning of the 'Third AI Boom', driven largely by Deep Learning advancements?",
+      "choices": ["1956", "1980", "2000", "2012"],
+      "correctAnswer": 3
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) Who are the three researchers often credited with the resurgence of Deep Learning (receiving the Turing Award)?",
+      "choices": ["Hinton, Bengio, LeCun", "Minsky, Papert, Rosenblatt", "Turing, McCarthy, Minsky", "Musk, Altman, Ng"],
+      "correctAnswer": 0
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) What competition in 2012 demonstrated the superiority of Deep Learning in image recognition?",
+      "choices": ["DARPA Challenge", "ILSVRC (ImageNet)", "Kaggle Titanic", "AlphaGo Match"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) Which type of neural network is characterized by all nodes being connected to each other and feeding information back and forth?",
+      "choices": ["Feedforward Network", "Hopfield Network", "Convolutional Network", "Perceptron"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) What distinguishes a 'Restricted Boltzmann Machine' (RBM) from a standard Boltzmann Machine?",
+      "choices": ["It has no hidden layers", "There are no connections between nodes in the same layer", "It uses only supervised learning", "It cannot handle binary data"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) Which AI model by DeepMind solved a 50-year-old grand challenge in biology regarding protein structure prediction?",
+      "choices": ["AlphaGo", "GPT-3", "AlphaFold", "DALL-E"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) Which learning paradigm involves an agent learning through trial and error to maximize a reward?",
+      "choices": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Self-supervised Learning"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) What hardware advancement significantly enabled the training of large deep learning models?",
+      "choices": ["Quantum CPU", "GPU (Graphics Processing Unit)", "Tape Drives", "Analog Computers"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) What is the primary difference between supervised and unsupervised learning?",
+      "choices": ["The speed of training", "The presence of labeled data (ground truth)", "The number of layers in the network", "The type of hardware used"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 1,
+      "question": "(Lecture 1) Which model is a 'Generative Pre-trained Transformer' developed by OpenAI?",
+      "choices": ["BERT", "T5", "GPT", "ResNet"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) In the context of machine learning, what are 'Features'?",
+      "choices": ["The output labels", "The observations or input variables used for prediction", "The errors in the model", "The coding language used"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) Which metric is defined as True Positives / (True Positives + False Positives)?",
+      "choices": ["Recall", "Accuracy", "Precision", "F1 Score"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) What does 'High Bias' typically indicate in a machine learning model?",
+      "choices": ["The model is overfitting", "The model is too complex", "The model is underfitting (too simple)", "The model has high variance"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) Which biological structure does the 'connection weight' in a neural network simulate?",
+      "choices": ["Nucleus", "Axon", "Synapse", "Dendrite"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) What is the purpose of the 'Backpropagation' algorithm?",
+      "choices": ["To initialize weights", "To calculate the error contribution of each neuron to update weights", "To forward pass the input data", "To visualize the network"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) Which activation function outputs values between 0 and 1?",
+      "choices": ["ReLU", "Tanh", "Sigmoid", "Linear"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) What happens during 'Overfitting'?",
+      "choices": ["The model performs well on training data but poorly on test data", "The model performs poorly on both training and test data", "The model generalizes perfectly", "The training error is higher than the test error"],
+      "correctAnswer": 0
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) In Gradient Descent, what determines the step size taken towards the minimum?",
+      "choices": ["The number of layers", "The Learning Rate", "The batch size", "The input dimension"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) Which logic gate problem could a single-layer Perceptron NOT solve?",
+      "choices": ["AND", "OR", "XOR", "NOT"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 2,
+      "question": "(Lecture 2) What is the main advantage of using Stochastic Gradient Descent (SGD) over Batch Gradient Descent?",
+      "choices": ["It is more accurate", "It is faster per update and can escape local minima", "It uses more memory", "It guarantees a straight path to the minimum"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) What biological discovery by Hubel & Wiesel inspired Convolutional Neural Networks?",
+      "choices": ["The structure of DNA", "Simple and Complex cells in the visual cortex", "The mechanism of hearing", "The speed of nerve impulses"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) What is the primary operation in a CNN that detects local features like edges?",
+      "choices": ["Pooling", "Convolution", "Flattening", "Softmax"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) What is the function of the 'Pooling' layer?",
+      "choices": ["To increase the image size", "To reduce dimensionality and provide translation invariance", "To add non-linearity", "To classify the image"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) Who developed 'LeNet', one of the first successful CNNs for digit recognition?",
+      "choices": ["Geoffrey Hinton", "Yann LeCun", "Andrew Ng", "Fei-Fei Li"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) What is a 'Filter Bank' in the context of CNNs?",
+      "choices": ["A mechanism to remove noise", "A collection of learnable kernels (weights) in a convolutional layer", "A database of images", "A type of activation function"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) In the 'Classical' recognition pipeline (pre-2012), features like SIFT or HOG were:",
+      "choices": ["Learned by the network", "Hand-crafted/Fixed", "Randomly generated", "Not used"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) Which dataset is famous for handwritten digit recognition (0-9)?",
+      "choices": ["CIFAR-10", "ImageNet", "MNIST", "COCO"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) What does 'Max Pooling' do?",
+      "choices": ["Calculates the average of a region", "Selects the maximum value in a local window", "Sums all values in a window", "Multiplies values in a window"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) Deep learning architectures for vision are characterized by:",
+      "choices": ["A single flat layer", "Hierarchical feature learning (Low -> Mid -> High level)", "Only using fully connected layers", "Manual feature extraction"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 3,
+      "question": "(Lecture 3) What does a 'Simple Cell' in the visual cortex primarily detect?",
+      "choices": ["Complex shapes", "Faces", "Oriented edges/bars", "Motion"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) Which activation function was key to the success of AlexNet in 2012?",
+      "choices": ["Sigmoid", "Tanh", "ReLU", "Linear"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) What technique did AlexNet use to reduce overfitting?",
+      "choices": ["Batch Normalization", "Dropout", "Layer Normalization", "Gradient Clipping"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) How many layers did VGG-19 have?",
+      "choices": ["8", "19", "22", "152"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) What is the main innovation of ResNet (Residual Networks)?",
+      "choices": ["Inception modules", "Skip (Residual) connections", "Separable convolutions", "Attention mechanisms"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) ResNet allows for training extremely deep networks by mitigating which problem?",
+      "choices": ["Overfitting", "Exploding Gradients", "Vanishing Gradients", "Data scarcity"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) What is the size of the filters typically used in VGG networks?",
+      "choices": ["3x3", "5x5", "7x7", "11x11"],
+      "correctAnswer": 0
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) Which network introduced the 'Inception Module'?",
+      "choices": ["AlexNet", "ResNet", "GoogLeNet", "VGG"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) What is the primary goal of 'Semantic Segmentation'?",
+      "choices": ["To classify the whole image", "To detect bounding boxes", "To label every pixel with a class", "To generate new images"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) The 'Vanishing Gradient' problem occurs when gradients become:",
+      "choices": ["Too large", "Close to zero", "Negative", "NaN"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 4,
+      "question": "(Lecture 4) What is 'Transfer Learning' in the context of CNNs?",
+      "choices": ["Training a model from scratch", "Using weights pre-trained on a large dataset (e.g., ImageNet) for a new task", " transferring data between GPUs", "Converting a CNN to an RNN"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) What does RNN stand for?",
+      "choices": ["Recursive Neural Network", "Recurrent Neural Network", "Random Neural Network", "Rapid Neural Network"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) What algorithm is used to train RNNs?",
+      "choices": ["Standard Backpropagation", "Backpropagation Through Time (BPTT)", "Contrastive Divergence", "Q-Learning"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) In an RNN, the hidden state at time 't' depends on:",
+      "choices": ["Only the input at time 't'", "Only the hidden state at time 't-1'", "The input at time 't' and the hidden state at time 't-1'", "The output at time 't'"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) Which problem makes standard RNNs difficult to train on long sequences?",
+      "choices": ["Vanishing/Exploding Gradients", "Too many parameters", "Slow inference", "Lack of data"],
+      "correctAnswer": 0
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) What simple technique is used to handle 'Exploding Gradients'?",
+      "choices": ["Dropout", "Gradient Clipping", "Batch Normalization", "ReLU"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) In language modeling, what is the goal?",
+      "choices": ["To translate text", "To predict the next word/character in a sequence", "To classify sentiment", "To summarize text"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) What is 'Truncated BPTT'?",
+      "choices": ["Training without backpropagation", "Unfolding the RNN for a limited number of steps to reduce complexity", "Ignoring the time dimension", "Using only the last time step"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) What is an N-gram model?",
+      "choices": ["A deep neural network", "A statistical model predicting a word based on N-1 previous words", "A model with N layers", "A dataset of N images"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) What does 'Parameter Sharing' mean in RNNs?",
+      "choices": ["Weights are different at each time step", "The same weights (U, V, W) are used across all time steps", "Sharing weights between different models", "Sharing data between users"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 5,
+      "question": "(Lecture 5) The output layer of a language model typically uses which activation function to produce probabilities?",
+      "choices": ["ReLU", "Sigmoid", "Softmax", "Tanh"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) What does LSTM stand for?",
+      "choices": ["Linear Standard Time Machine", "Long Short-Term Memory", "Latent Structure Time Model", "Low Short-Term Memory"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) Which component is the 'highway' for information in an LSTM, helping prevent vanishing gradients?",
+      "choices": ["Hidden State", "Cell State", "Input Gate", "Output Gate"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) Which gate in an LSTM is responsible for removing information from the cell state?",
+      "choices": ["Input Gate", "Output Gate", "Forget Gate", "Update Gate"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) What is 'CEC' in the context of LSTM history?",
+      "choices": ["Central Error Controller", "Constant Error Carousel", "Computed Error Context", "Critical Error Correction"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) Which activation function is typically used for the 'gates' (Input, Forget, Output) in an LSTM?",
+      "choices": ["Tanh", "ReLU", "Sigmoid", "Linear"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) Which activation function is typically used to create the 'Candidate Cell State' (update vector)?",
+      "choices": ["Sigmoid", "Tanh", "ReLU", "Softmax"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) What is a 'Peep-hole connection'?",
+      "choices": ["A connection allowing the gates to inspect the Cell State", "A connection to the next layer", "A connection to the previous input", "A visualization tool"],
+      "correctAnswer": 0
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) Compared to a standard RNN, an LSTM unit is:",
+      "choices": ["Simpler", "More complex with more parameters", "Faster to train", "Unable to handle sequences"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) The output hidden state (h_t) of an LSTM is a filtered version of:",
+      "choices": ["The Input Gate", "The Forget Gate", "The Cell State", "The previous input"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 6,
+      "question": "(Lecture 6) In the equation C_t = f_t * C_{t-1} + i_t * g_t, what does 'f_t' represent?",
+      "choices": ["Input Gate", "Forget Gate", "Output Gate", "Candidate State"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) How does a GRU (Gated Recurrent Unit) differ from an LSTM?",
+      "choices": ["It has more gates", "It separates Cell State and Hidden State", "It combines the Forget and Input gates into an 'Update Gate'", "It cannot be used for sequences"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) What are the two gates in a standard GRU?",
+      "choices": ["Input and Output", "Forget and Reset", "Update and Reset", "Update and Forget"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) A Bi-directional LSTM consists of:",
+      "choices": ["Two LSTMs reading input in the same direction", "One LSTM reading forward and one reading backward", "Two LSTMs stacked vertically", "An LSTM and a GRU"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) In an Encoder-Decoder architecture, the Encoder compresses the input sequence into a:",
+      "choices": ["Fixed-length Context Vector", "Variable-length list", "Single word", "Matrix of zeros"],
+      "correctAnswer": 0
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) What problem does the 'Attention Mechanism' solve in Seq2Seq models?",
+      "choices": ["The vanishing gradient problem", "The bottleneck of a fixed-length context vector", "The need for GPUs", "The problem of overfitting"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) What are the three vectors used in the Self-Attention mechanism?",
+      "choices": ["Input, Output, Hidden", "Query, Key, Value", "Alpha, Beta, Gamma", "Source, Target, Context"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) The 'Transformer' model relies entirely on which mechanism?",
+      "choices": ["Recurrence", "Convolution", "Attention", "Pooling"],
+      "correctAnswer": 2
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) Why is 'Positional Encoding' necessary in Transformers?",
+      "choices": ["To increase accuracy", "Because the model has no inherent sense of order/sequence", "To encrypt the data", "To compress the input"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) What is 'Word2Vec'?",
+      "choices": ["A text editor", "A technique to convert words into vectors where similar words are close in space", "A translation engine", "A type of RNN"],
+      "correctAnswer": 1
+    },
+    {
+      "lecture": 7,
+      "question": "(Lecture 7) Which of the following is a BERT model characteristic?",
+      "choices": ["Unidirectional (Left-to-Right)", "Bidirectional context", "Generative only", "Uses LSTM cells"],
+      "correctAnswer": 1
+    }
+  ]
 }
