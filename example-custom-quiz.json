@@ -1,29 +1,154 @@
 {
-    "title": "Custom Quiz Example",
+    "title": "Comprehensive AI & Deep Learning Exam",
     "questions": [
         {
-            "question": "What is the result of 5 + 3?",
-            "choices": ["6", "7", "8", "9"],
-            "correctAnswer": 2
-        },
-        {
-            "question": "Which color is created by mixing blue and yellow?",
-            "choices": ["Green", "Purple", "Orange", "Red"],
-            "correctAnswer": 0
-        },
-        {
-            "question": "How many continents are there?",
-            "choices": ["5", "6", "7", "8"],
-            "correctAnswer": 2
-        },
-        {
-            "question": "What is the largest mammal?",
-            "choices": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
+            "question": "What defines 'Deep Learning' compared to traditional machine learning?",
+            "choices": ["It uses only supervised learning", "It involves neural networks with multiple non-linear layers", "It requires no training data", "It only works for image recognition"],
             "correctAnswer": 1
         },
         {
-            "question": "In which year did World War I begin?",
-            "choices": ["1912", "1914", "1916", "1918"],
+            "question": "Which type of machine learning involves an agent learning to make decisions by receiving rewards or penalties?",
+            "choices": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Semi-supervised Learning"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "What is the primary purpose of an activation function in a neural network?",
+            "choices": ["To calculate the loss", "To introduce non-linearity into the model", "To initialize weights", "To reduce the dimensionality of data"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "Which activation function helps solve the vanishing gradient problem and is defined as f(x) = max(0, x)?",
+            "choices": ["Sigmoid", "Tanh", "ReLU (Rectified Linear Unit)", "Softmax"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "What is the output range of the Tanh (Hyperbolic Tangent) activation function?",
+            "choices": ["0 to 1", "-1 to 1", "0 to infinity", "-infinity to infinity"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "Which optimization algorithm updates model weights based on a small subset of training data at a time?",
+            "choices": ["Batch Gradient Descent", "Stochastic Gradient Descent (SGD)", "Mini-batch Gradient Descent", "Newton's Method"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "In Convolutional Neural Networks (CNNs), what is the main purpose of the Pooling layer?",
+            "choices": ["To increase the number of parameters", "To detect edges", "To downsample feature maps and reduce computation", "To classify the final output"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "Which famous CNN architecture won the ILSVRC 2012 competition and sparked the deep learning boom in computer vision?",
+            "choices": ["LeNet", "AlexNet", "VGG16", "ResNet"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What major problem do Residual Networks (ResNet) solve to allow training of very deep networks?",
+            "choices": ["Overfitting", "Exploding Gradients", "Vanishing Gradients (using skip connections)", "High computational cost"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "What is the training algorithm used for updating weights in Recurrent Neural Networks (RNNs)?",
+            "choices": ["Standard Backpropagation", "Backpropagation Through Time (BPTT)", "Genetic Algorithms", "K-Means Clustering"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "In an LSTM network, which gate determines how much of the previous cell state should be kept?",
+            "choices": ["Input Gate", "Output Gate", "Forget Gate", "Update Gate"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "How does a Gated Recurrent Unit (GRU) differ from a standard LSTM?",
+            "choices": ["It has more gates", "It combines the Forget and Input gates into an Update gate", "It cannot handle sequential data", "It uses a different activation function"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What is the advantage of using a Bi-directional LSTM over a standard LSTM?",
+            "choices": ["It requires less memory", "It processes data faster", "It can access context from both the past and the future", "It eliminates the need for training"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "In the context of Neural Machine Translation, what is the 'bottleneck' problem in standard Encoder-Decoder models?",
+            "choices": ["The Encoder is too slow", "The Decoder cannot generate text", "Compressing a long sentence into a fixed-length context vector loses information", "The vocabulary size is too small"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "What mechanism was introduced to solve the bottleneck problem by allowing the Decoder to look at different parts of the input sequence?",
+            "choices": ["Dropout", "MaxPooling", "Attention Mechanism", "Batch Normalization"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "The Transformer architecture, introduced in 'Attention Is All You Need', relies entirely on what mechanism?",
+            "choices": ["Recurrence (RNNs)", "Convolutions (CNNs)", "Self-Attention", "Reinforcement Learning"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "In the Self-Attention mechanism, what are the three vectors generated for each input token?",
+            "choices": ["Query, Key, Value", "Input, Hidden, Output", "Forget, Update, Reset", "Alpha, Beta, Gamma"],
+            "correctAnswer": 0
+        },
+        {
+            "question": "Why does the Transformer model require Positional Encoding?",
+            "choices": ["To increase model size", "Because it processes data in parallel and has no inherent sense of order", "To encrypt the data", "To reduce training time"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What is 'Word Embedding' (e.g., Word2Vec)?",
+            "choices": ["A way to compress text files", "Representing words as dense vectors where similar meanings are close in space", "Translating words into binary code", "Sorting words alphabetically"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "Which loss function is commonly used in Speech Recognition to handle alignment between audio frames and text characters?",
+            "choices": ["Mean Squared Error (MSE)", "Cross-Entropy Loss", "Connectionist Temporal Classification (CTC)", "Hinge Loss"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "In unsupervised video representation learning, what is the goal of the 'Future Frame Predictor' model?",
+            "choices": ["To classify the video genre", "To predict the next frames based on past frames", "To reconstruct the current frame only", "To remove noise from the video"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What is the 'Composite Model' in the context of LSTM video learning?",
+            "choices": ["A model that only uses CNNs", "A model that combines an Auto-encoder (reconstruction) and a Future Predictor", "A model that uses audio and video", "A model for text translation"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What modification does 'Peep-hole optimization' make to a standard LSTM?",
+            "choices": ["It removes the output gate", "It allows gates to look at the cell state", "It replaces Sigmoid with ReLU", "It adds a second hidden layer"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "Which BERT model characteristic distinguishes it from the original GPT?",
+            "choices": ["It is unidirectional", "It is bidirectional (looks at context from both sides)", "It generates text one word at a time", "It uses RNNs instead of Transformers"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What does the term 'Epoch' refer to in machine learning training?",
+            "choices": ["One forward pass of a single data point", "One update of the weights", "One complete pass through the entire training dataset", "The final accuracy score"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "Which technique helps prevent overfitting by randomly turning off neurons during training?",
+            "choices": ["Padding", "Stride", "Dropout", "Pooling"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "What is 'Semantic Segmentation' in computer vision?",
+            "choices": ["Classifying the whole image", "Drawing a box around an object", "Labeling every pixel in an image with a class", "Detecting motion in video"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "Which dataset played a crucial role in the 2012 Deep Learning breakthrough due to its large scale (1.5M images)?",
+            "choices": ["MNIST", "CIFAR-10", "ImageNet", "COCO"],
+            "correctAnswer": 2
+        },
+        {
+            "question": "In a Transformer Block, what layer typically follows the Multi-Head Attention and Add & Norm layers?",
+            "choices": ["Convolutional Layer", "Feed Forward Network", "Recurrent Layer", "Pooling Layer"],
+            "correctAnswer": 1
+        },
+        {
+            "question": "What defines the 'Vanishing Gradient' problem?",
+            "choices": ["Gradients become too large and cause instability", "Gradients become so small that weights stop updating in early layers", "The model runs out of memory", "The loss function reaches zero too quickly"],
             "correctAnswer": 1
         }
     ]
