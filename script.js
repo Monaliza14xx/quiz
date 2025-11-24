@@ -98,10 +98,10 @@ function handleFileUpload(event) {
                 quizData = data;
                 startQuiz();
             } else {
-                alert('Invalid quiz format. Please check the JSON structure.');
+                alert('Invalid quiz format. Please ensure your JSON file has a "questions" array where each question has: question text, choices array, and correctAnswer index.');
             }
         } catch (error) {
-            alert('Error parsing JSON file: ' + error.message);
+            alert('Invalid JSON file format. Please check your file and try again.');
         }
     };
     reader.readAsText(file);
@@ -255,20 +255,46 @@ function displayMistakes() {
             const mistakeItem = document.createElement('div');
             mistakeItem.classList.add('mistake-item');
             
-            mistakeItem.innerHTML = `
-                <div class="mistake-question">Question ${index + 1}: ${question.question}</div>
-                <div class="mistake-details">
-                    <p><span class="your-answer">Your answer: ${question.choices[userAnswers[index]]}</span></p>
-                    <p><span class="correct-answer">Correct answer: ${question.choices[question.correctAnswer]}</span></p>
-                </div>
-            `;
+            // Create mistake question
+            const mistakeQuestion = document.createElement('div');
+            mistakeQuestion.classList.add('mistake-question');
+            mistakeQuestion.textContent = `Question ${index + 1}: ${question.question}`;
+            
+            // Create mistake details container
+            const mistakeDetails = document.createElement('div');
+            mistakeDetails.classList.add('mistake-details');
+            
+            // Your answer
+            const yourAnswerP = document.createElement('p');
+            const yourAnswerSpan = document.createElement('span');
+            yourAnswerSpan.classList.add('your-answer');
+            yourAnswerSpan.textContent = `Your answer: ${question.choices[userAnswers[index]]}`;
+            yourAnswerP.appendChild(yourAnswerSpan);
+            
+            // Correct answer
+            const correctAnswerP = document.createElement('p');
+            const correctAnswerSpan = document.createElement('span');
+            correctAnswerSpan.classList.add('correct-answer');
+            correctAnswerSpan.textContent = `Correct answer: ${question.choices[question.correctAnswer]}`;
+            correctAnswerP.appendChild(correctAnswerSpan);
+            
+            mistakeDetails.appendChild(yourAnswerP);
+            mistakeDetails.appendChild(correctAnswerP);
+            
+            mistakeItem.appendChild(mistakeQuestion);
+            mistakeItem.appendChild(mistakeDetails);
             
             mistakesList.appendChild(mistakeItem);
         }
     });
     
     if (mistakeCount === 0) {
-        mistakesList.innerHTML = '<p style="text-align: center; color: #4caf50; font-weight: bold;">Perfect score! No mistakes! 🎉</p>';
+        const perfectMsg = document.createElement('p');
+        perfectMsg.style.textAlign = 'center';
+        perfectMsg.style.color = '#4caf50';
+        perfectMsg.style.fontWeight = 'bold';
+        perfectMsg.textContent = 'Perfect score! No mistakes! 🎉';
+        mistakesList.appendChild(perfectMsg);
     }
 }
 
