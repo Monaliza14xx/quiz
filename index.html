@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Website</h1>
+        
+        <!-- File Upload Section -->
+        <div id="upload-section" class="section">
+            <h2>Upload Quiz JSON</h2>
+            <input type="file" id="file-input" accept=".json">
+            <button id="load-sample-btn">Load Sample Quiz</button>
+            <p class="info">Upload a JSON file with quiz questions or load the sample quiz</p>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="section hidden">
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p id="progress-text" class="progress-text">Question 1 of 10</p>
+            </div>
+
+            <!-- Question Display -->
+            <div id="question-container" class="question-container">
+                <h2 id="question-text"></h2>
+                <div id="choices-container" class="choices-container"></div>
+                <button id="next-btn" class="btn hidden">Next Question</button>
+                <button id="submit-btn" class="btn hidden">Submit Quiz</button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" class="section hidden">
+            <h2>Quiz Results</h2>
+            <div id="score-container" class="score-container">
+                <p id="score-text"></p>
+                <p id="percentage-text"></p>
+            </div>
+            
+            <div id="mistakes-container" class="mistakes-container">
+                <h3>Review Your Mistakes:</h3>
+                <div id="mistakes-list"></div>
+            </div>
+            
+            <button id="restart-btn" class="btn">Start New Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
