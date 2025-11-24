@@ -25,7 +25,10 @@ function initHtmxPolyfill() {
                     const customEvent = new CustomEvent('htmx:afterRequest', {
                         detail: {
                             target: target,
-                            xhr: { responseText: JSON.stringify(data) }
+                            xhr: { 
+                                responseText: JSON.stringify(data),
+                                parsedData: data // Store parsed data to avoid double-parsing
+                            }
                         }
                     });
                     document.body.dispatchEvent(customEvent);
@@ -134,7 +137,8 @@ restartBtn.addEventListener('click', restartQuiz);
 document.body.addEventListener('htmx:afterRequest', function(event) {
     if (event.detail.target.id === 'load-sample-btn') {
         try {
-            const data = JSON.parse(event.detail.xhr.responseText);
+            // Use parsedData if available (from polyfill), otherwise parse responseText
+            const data = event.detail.xhr.parsedData || JSON.parse(event.detail.xhr.responseText);
             if (validateQuizData(data)) {
                 quizData = data;
                 startQuiz();
